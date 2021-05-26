@@ -1,2 +1,3 @@
-# PythonProj
-A repo to hold my python projects that I will be doing over the summer of 2021
+# Summer Projects
+A repo to hold my summer projects that I will be doing in 2021 
+in order to gain experrience.
