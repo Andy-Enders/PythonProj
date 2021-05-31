@@ -12,8 +12,15 @@ from bs4 import BeautifulSoup
 
 def getSite():
     website = 'https://www.indeed.com/jobs?q=software+developer&l=Denver%2C+CO'
-    req = requests.get(website)
-    return req.status_code
+    html = requests.get(website).text
+    return html
 
 
-print(getSite())
+# create a function to parse the site
+def create_soup(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    print(soup.prettify())
+
+
+html = getSite()
+create_soup(html)
