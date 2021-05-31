@@ -2,6 +2,9 @@
 # note, requests are limited on Indeed's side
 # don't request too many times in a short period or else
 # it won't work
+
+# code is based on several tutorials but mainly
+# this video https://www.youtube.com/watch?v=PPcgtx0sI2E
 import requests
 from bs4 import BeautifulSoup
 
