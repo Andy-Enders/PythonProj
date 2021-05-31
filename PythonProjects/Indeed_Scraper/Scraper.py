@@ -3,8 +3,8 @@
 # don't request too many times in a short period or else
 # it won't work
 
-# code is based on several tutorials but mainly
-# this video https://www.youtube.com/watch?v=PPcgtx0sI2E
+# referenced this video to get me started
+# https://www.youtube.com/watch?v=PPcgtx0sI2E
 import requests
 from bs4 import BeautifulSoup
 
