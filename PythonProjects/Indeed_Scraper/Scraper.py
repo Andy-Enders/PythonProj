@@ -1,15 +1,15 @@
 # Web scraper to scrape jobs off of Indeed
-
+# Made in Python 3.8
 
 # The program sometimes works
 # It seems almost as if the full html isn't being downloaded or
 # it is based on javascript and sometimes loads in and other times doesn't.
 
 import urllib.request
-import requests
 from bs4 import BeautifulSoup
 
 template = 'https://www.indeed.com/jobs?q=software+developer&l=Denver%2C+CO&fromage=14'
+
 
 # create a function that gets the website page
 def getSite(position, location):
@@ -27,7 +27,7 @@ def create_soup(html):
 
 # create a function to get the job-cards on indeed
 def get_job_cards(soup):
-    job_cards = soup.find_all('div','jobsearch-SerpJobCard')
+    job_cards = soup.find_all('div', 'jobsearch-SerpJobCard')
     if len(job_cards) == 0:
         print("find_all cant find anything, try again")
         return []
