@@ -5,6 +5,7 @@
 # It seems almost as if the full html isn't being downloaded or
 # it is based on javascript and sometimes loads in and other times doesn't.
 
+import urllib.request
 import requests
 from bs4 import BeautifulSoup
 
@@ -13,9 +14,9 @@ template = 'https://www.indeed.com/jobs?q=software+developer&l=Denver%2C+CO&from
 # create a function that gets the website page
 def getSite(position, location):
     website = 'https://www.indeed.com/jobs?q=software+developer&l=Denver%2C+CO&fromage=14'
-    html = requests.get(website)
+    html = urllib.request.urlopen(website)
     # print(html.status_code)
-    return html.text
+    return html
 
 
 # create a function to parse the site
